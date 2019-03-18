@@ -1,25 +1,21 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Router, Link } from "@reach/router";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import GlobalStyle from "./components/styled/GlobalStyle";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <GlobalStyle computerFont />
+        <nav>
+          <Link to="/">Home</Link> <Link to="about">About</Link>
+        </nav>
+        <Router>
+          <Home path="/" />
+          <About path="about" />
+        </Router>
       </div>
     );
   }
