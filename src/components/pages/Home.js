@@ -26,7 +26,7 @@ export default class Home extends Component {
   render() {
     return (
       <Container>
-        <h1>Hey Coders f</h1>
+        <h1>Hey Coders Look Hot Re-loading with State</h1>
         {console.log("html data: " + this.state.data)}
         <p>{this.state.data}</p>
         <button onClick={this.increment.bind(this)}>Increment</button>

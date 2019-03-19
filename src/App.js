@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Router, Link } from "@reach/router";
+import { hot } from "react-hot-loader";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import GlobalStyle from "./components/styled/GlobalStyle";
@@ -21,4 +22,5 @@ class App extends Component {
   }
 }
 
-export default App;
+// export default App;
+export default hot(module)(App);
